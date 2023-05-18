@@ -1,0 +1,26 @@
+dataset: 'gem'
+clusters_path: 'al_data_archive/kmeans_600_outliers_removed.npy'
+np_clusters: True
+model: 'facebook/bart-base'
+rouge_metric: 'rouge2'
+rouge_threshold: 0.15
+
+strategy: 'cluster'
+remove_outliers: true
+num_al_iterations: 30
+init_size: 600
+init_size_per_cluster: 1
+step_size: 100
+dev_size: 1200
+dev_size_per_cluster: 2
+remove_dev_from_train: True
+uncertainty_sampling_rate: 0.5
+
+batch_size: 128
+eval_batch_size: 64
+lr: 2e-5
+warmup_steps: 1000
+exp_name: 'base'
+MAX_LENGTH : 32
+device: 'cuda'
+seed: 42
